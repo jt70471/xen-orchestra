@@ -733,6 +733,7 @@ class SDNController extends EventEmitter {
       }
     } catch (error) {
       log.error('Error while adding OF rule', {
+        error,
         vif: vif.uuid,
         host: vif.$VM.$resident_on.uuid,
         allow,
@@ -789,6 +790,7 @@ class SDNController extends EventEmitter {
       await this._applyVifOfRules(vif)
     } catch (error) {
       log.error('Error while adding OF rule', {
+        error,
         vif: vif.uuid,
         host: vif.$VM.$resident_on.uuid,
         protocol,
