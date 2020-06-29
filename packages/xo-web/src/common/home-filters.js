@@ -5,15 +5,12 @@ const common = {
 export const VM = {
   ...common,
   homeFilterPendingVms: 'current_operations:"" ',
-  homeFilterNonRunningVms: '!power_state:running ',
   homeFilterHvmGuests: 'virtualizationMode:hvm ',
-  homeFilterRunningVms: 'power_state:running ',
   homeFilterTags: 'tags:',
 }
 
 export const host = {
   ...common,
-  homeFilterRunningHosts: 'power_state:running ',
   homeFilterTags: 'tags:',
 }
 
